@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baseline Tennis Club</title>
+  <style>
+    :root {
+      --court: #2f7d4f;
+      --court-dark: #1f5a37;
+      --line: #ffffff;
+      --ball: #d7f23a;
+      --ink: #1b1f1d;
+      --blue: #1e5eff;
+      --bg: #f6f8f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: var(--court-dark);
+      color: #fff;
+    }
+    header .logo { font-weight: 800; font-size: 1.25rem; display: flex; align-items: center; gap: 8px; }
+    header .logo span.ball {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--ball); display: inline-block;
+    }
+    nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+
+    .hi {
+      text-align: center;
+      color: var(--blue);
+      font-size: clamp(4rem, 16vw, 14rem);
+      font-weight: 900;
+      line-height: 1;
+      margin: 48px 16px 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 24px auto 48px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hero h2 { font-size: 2.25rem; margin: 0 0 12px; }
+    .hero p { font-size: 1.1rem; line-height: 1.6; margin: 0 0 20px; }
+    .btn {
+      display: inline-block;
+      background: var(--court);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .unicorn { width: 100%; max-width: 460px; justify-self: center; }
+
+    .features {
+      max-width: 1100px;
+      margin: 0 auto 64px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      border-top: 6px solid var(--court);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin: 0 0 8px; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      background: var(--court-dark);
+      color: #d9e8de;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 760px) {
+      .hero, .features { grid-template-columns: 1fr; }
+      nav a { margin-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span class="ball"></span> Baseline Tennis Club</div>
+    <nav>
+      <a href="#">Courts</a>
+      <a href="#">Lessons</a>
+      <a href="#">Events</a>
+      <a href="#">Join</a>
+    </nav>
+  </header>
+
+  <h1 class="hi">hi andrew</h1>
+
+  <section class="hero">
+    <div>
+      <h2>Serve, rally, repeat.</h2>
+      <p>Six outdoor hard courts, two clay courts, coaching for every level, and a resident unicorn who never misses a line call.</p>
+      <a class="btn" href="#">Book a court</a>
+    </div>
+
+    <!-- Unicorn holding a tennis racket -->
+    <svg class="unicorn" viewBox="0 0 400 340" role="img" aria-label="A white unicorn with a rainbow mane holding a tennis racket">
+      <!-- ground shadow -->
+      <ellipse cx="190" cy="318" rx="140" ry="12" fill="#000" opacity="0.12"/>
+      <!-- tail -->
+      <path d="M60 170 C20 160 15 220 40 250 C30 215 50 200 65 195 Z" fill="#ff7eb6"/>
+      <path d="M62 180 C35 185 35 230 55 255 C50 225 62 210 72 205 Z" fill="#a78bfa"/>
+      <!-- back legs -->
+      <rect x="85" y="210" width="22" height="95" rx="10" fill="#f4f1fb"/>
+      <rect x="115" y="215" width="22" height="90" rx="10" fill="#e8e3f5"/>
+      <!-- front legs -->
+      <rect x="200" y="215" width="22" height="90" rx="10" fill="#e8e3f5"/>
+      <rect x="228" y="210" width="22" height="95" rx="10" fill="#f4f1fb"/>
+      <!-- hooves -->
+      <rect x="85" y="298" width="22" height="12" rx="4" fill="#b48cff"/>
+      <rect x="115" y="298" width="22" height="12" rx="4" fill="#b48cff"/>
+      <rect x="200" y="298" width="22" height="12" rx="4" fill="#b48cff"/>
+      <rect x="228" y="298" width="22" height="12" rx="4" fill="#b48cff"/>
+      <!-- body -->
+      <ellipse cx="165" cy="190" rx="105" ry="58" fill="#fbfaff" stroke="#d9d2ee" stroke-width="3"/>
+      <!-- neck -->
+      <path d="M225 170 L250 90 L300 100 L270 195 Z" fill="#fbfaff" stroke="#d9d2ee" stroke-width="3"/>
+      <!-- head -->
+      <ellipse cx="295" cy="95" rx="48" ry="32" transform="rotate(20 295 95)" fill="#fbfaff" stroke="#d9d2ee" stroke-width="3"/>
+      <!-- snout -->
+      <ellipse cx="330" cy="115" rx="22" ry="18" fill="#ffe3ef"/>
+      <circle cx="338" cy="113" r="3" fill="#c76a92"/>
+      <!-- eye -->
+      <circle cx="295" cy="85" r="6" fill="#2a2140"/>
+      <circle cx="297" cy="83" r="2" fill="#fff"/>
+      <!-- ear -->
+      <path d="M268 65 L272 38 L288 62 Z" fill="#fbfaff" stroke="#d9d2ee" stroke-width="3"/>
+      <!-- horn -->
+      <path d="M285 60 L318 8 L300 66 Z" fill="#ffd54a" stroke="#e0a800" stroke-width="2"/>
+      <path d="M292 50 L306 44 M296 38 L311 31 M301 26 L314 20" stroke="#e0a800" stroke-width="2"/>
+      <!-- rainbow mane -->
+      <path d="M262 62 C235 70 230 100 240 125 C228 110 222 90 230 72 Z" fill="#ff5c8a"/>
+      <path d="M255 85 C228 95 225 125 235 150 C222 135 215 110 225 92 Z" fill="#ffa63d"/>
+      <path d="M248 108 C222 118 220 148 228 172 C215 158 208 132 218 115 Z" fill="#ffe14d"/>
+      <path d="M244 130 C222 140 220 165 226 185 C212 172 208 150 216 138 Z" fill="#5ed17a"/>
+      <!-- tennis racket held by front -->
+      <g transform="rotate(-25 300 200)">
+        <rect x="292" y="190" width="10" height="70" rx="4" fill="#3b3b3b"/>
+        <ellipse cx="297" cy="160" rx="30" ry="38" fill="none" stroke="#1e5eff" stroke-width="7"/>
+        <g stroke="#9bb6ff" stroke-width="1.5">
+          <line x1="277" y1="140" x2="317" y2="140"/>
+          <line x1="270" y1="152" x2="324" y2="152"/>
+          <line x1="268" y1="164" x2="326" y2="164"/>
+          <line x1="271" y1="176" x2="323" y2="176"/>
+          <line x1="280" y1="188" x2="314" y2="188"/>
+          <line x1="285" y1="126" x2="285" y2="194"/>
+          <line x1="297" y1="122" x2="297" y2="198"/>
+          <line x1="309" y1="126" x2="309" y2="194"/>
+        </g>
+      </g>
+      <!-- tennis ball -->
+      <circle cx="360" cy="215" r="16" fill="#d7f23a" stroke="#a9c21d" stroke-width="2"/>
+      <path d="M347 205 C356 212 356 220 347 226 M373 205 C364 212 364 220 373 226" fill="none" stroke="#fff" stroke-width="2.5"/>
+    </svg>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Court bookings</h3>
+      <p>Reserve hard or clay courts up to 7 days ahead, with floodlights until 10pm.</p>
+    </div>
+    <div class="card">
+      <h3>Lessons</h3>
+      <p>Private and group coaching for juniors, beginners, and competitive players.</p>
+    </div>
+    <div class="card">
+      <h3>Club events</h3>
+      <p>Weekly social doubles, a monthly ladder, and the summer championships.</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Baseline Tennis Club</footer>
+</body>
+</html>
